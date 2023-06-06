@@ -1,0 +1,6 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/WinDuramas/obj/Debug/net6.0-windows/WinDuramas.designer.runtimeconfig.json
+/WinDuramas/obj/Debug/net6.0-windows/WinDuramas.designer.runtimeconfig.json

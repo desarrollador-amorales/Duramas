@@ -24,6 +24,7 @@
     Sub ListadoAlmacenes()
         '  Dim Tabla As New Sql
         ' nuevo comentario
+        'linea
     End Sub
 
 End Class
