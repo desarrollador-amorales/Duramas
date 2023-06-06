@@ -22,6 +22,7 @@
     End Sub
 
     Sub ListadoAlmacenes()
+        'nueva consulta
         '  Dim Tabla As New Sql
         ' nuevo comentario
         'linea
