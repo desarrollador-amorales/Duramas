@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WinDuramas", "WinDuramas\WinDuramas.vbproj", "{F571BB5E-C43D-4C02-98E0-C0FA2001D4FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{950857DB-D118-47EC-940C-60439E201CFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F571BB5E-C43D-4C02-98E0-C0FA2001D4FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F571BB5E-C43D-4C02-98E0-C0FA2001D4FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F571BB5E-C43D-4C02-98E0-C0FA2001D4FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F571BB5E-C43D-4C02-98E0-C0FA2001D4FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C59CEBAE-92D8-4382-9722-A5E9359D8FD5}
+	EndGlobalSection
+EndGlobal

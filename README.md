@@ -1,2 +1,0 @@
-# Duramas
-Software Development Duramas 
