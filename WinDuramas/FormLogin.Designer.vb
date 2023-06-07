@@ -32,54 +32,58 @@ Partial Class FormLogin
         ' lblUser
         ' 
         lblUser.AutoSize = True
-        lblUser.Location = New Point(136, 63)
+        lblUser.Location = New Point(99, 47)
         lblUser.Name = "lblUser"
-        lblUser.Size = New Size(59, 20)
+        lblUser.Size = New Size(50, 15)
         lblUser.TabIndex = 0
-        lblUser.Text = "Usuario"
+        lblUser.Text = "Usuario:"
         ' 
         ' lblContrasena
         ' 
         lblContrasena.AutoSize = True
-        lblContrasena.Location = New Point(136, 120)
+        lblContrasena.Location = New Point(99, 90)
         lblContrasena.Name = "lblContrasena"
-        lblContrasena.Size = New Size(83, 20)
+        lblContrasena.Size = New Size(70, 15)
         lblContrasena.TabIndex = 1
-        lblContrasena.Text = "Contraseña"
+        lblContrasena.Text = "Contraseña:"
         ' 
         ' txtUser
         ' 
-        txtUser.Location = New Point(229, 56)
+        txtUser.Location = New Point(180, 42)
+        txtUser.Margin = New Padding(3, 2, 3, 2)
         txtUser.Name = "txtUser"
-        txtUser.Size = New Size(131, 27)
+        txtUser.Size = New Size(115, 23)
         txtUser.TabIndex = 2
         ' 
         ' txtPass
         ' 
-        txtPass.Location = New Point(229, 117)
+        txtPass.Location = New Point(180, 88)
+        txtPass.Margin = New Padding(3, 2, 3, 2)
         txtPass.Name = "txtPass"
-        txtPass.Size = New Size(131, 27)
+        txtPass.Size = New Size(115, 23)
         txtPass.TabIndex = 3
         ' 
         ' btnIngresar
         ' 
-        btnIngresar.Location = New Point(229, 184)
+        btnIngresar.Location = New Point(180, 135)
+        btnIngresar.Margin = New Padding(3, 2, 3, 2)
         btnIngresar.Name = "btnIngresar"
-        btnIngresar.Size = New Size(114, 27)
+        btnIngresar.Size = New Size(100, 27)
         btnIngresar.TabIndex = 4
         btnIngresar.Text = "Ingresar"
         btnIngresar.UseVisualStyleBackColor = True
         ' 
         ' FormLogin
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(577, 251)
+        ClientSize = New Size(424, 188)
         Controls.Add(btnIngresar)
         Controls.Add(txtPass)
         Controls.Add(txtUser)
         Controls.Add(lblContrasena)
         Controls.Add(lblUser)
+        Margin = New Padding(3, 2, 3, 2)
         Name = "FormLogin"
         Text = "FormLogin"
         ResumeLayout(False)
