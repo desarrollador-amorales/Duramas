@@ -16,6 +16,7 @@ Public Class FormLogin
         If AuthenticateUser(username, password) Then
             MessageBox.Show("Inicio de sesión exitoso")
             ' Aquí puedes redirigir al usuario a la página principal u otra funcionalidad
+            ' Mensaje de inicio
         Else
             MessageBox.Show("Nombre de usuario o contraseña incorrectos")
         End If
