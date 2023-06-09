@@ -36,4 +36,7 @@ Public Class FormLogin
         End Using
     End Function
 
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        ControlGeneral.Desconectar()
+    End Sub
 End Class

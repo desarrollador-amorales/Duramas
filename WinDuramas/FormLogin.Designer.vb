@@ -29,6 +29,7 @@ Partial Class FormLogin
         txtPass = New TextBox()
         btnIngresar = New Button()
         PictureBox1 = New PictureBox()
+        btnCancelar = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -66,9 +67,9 @@ Partial Class FormLogin
         ' 
         ' btnIngresar
         ' 
-        btnIngresar.Location = New Point(206, 180)
+        btnIngresar.Location = New Point(113, 190)
         btnIngresar.Name = "btnIngresar"
-        btnIngresar.Size = New Size(114, 36)
+        btnIngresar.Size = New Size(97, 36)
         btnIngresar.TabIndex = 4
         btnIngresar.Text = "Ingresar"
         btnIngresar.UseVisualStyleBackColor = True
@@ -82,11 +83,21 @@ Partial Class FormLogin
         PictureBox1.TabIndex = 5
         PictureBox1.TabStop = False
         ' 
+        ' btnCancelar
+        ' 
+        btnCancelar.Location = New Point(259, 190)
+        btnCancelar.Name = "btnCancelar"
+        btnCancelar.Size = New Size(97, 36)
+        btnCancelar.TabIndex = 6
+        btnCancelar.Text = "Cancelar"
+        btnCancelar.UseVisualStyleBackColor = True
+        ' 
         ' FormLogin
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(485, 251)
+        Controls.Add(btnCancelar)
         Controls.Add(PictureBox1)
         Controls.Add(btnIngresar)
         Controls.Add(txtPass)
@@ -106,4 +117,5 @@ Partial Class FormLogin
     Friend WithEvents txtPass As TextBox
     Friend WithEvents btnIngresar As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnCancelar As Button
 End Class

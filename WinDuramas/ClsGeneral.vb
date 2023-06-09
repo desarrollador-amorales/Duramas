@@ -5,9 +5,10 @@ Imports System.Data.Odbc
 
 Public Class ClsGeneral
 
+    Dim CadenaConexion As String = "Driver=DSNSai;uid=SA;pwd=AngJua1289"
+    Dim Conexion As New OdbcConnection(CadenaConexion)
+
     Sub Conectar()
-        Dim CadenaConexion As String = "Driver=DSNSai;uid=SA;pwd=AngJua1289"
-        Dim Conexion As New OdbcConnection(CadenaConexion)
 
         Try
             Conexion.Open()
@@ -37,6 +38,15 @@ Public Class ClsGeneral
             ' Asegúrate de cerrar la conexión cuando hayas terminado
         End Try
 
+    End Sub
+
+    Sub Desconectar()
+        'Función para realizar la desconexión con la base de datos.
+
+        Conexion.Close
+        Conexion = Nothing
+        '     Conexion1.Close
+        '     Set Conexion1 = Nothing
     End Sub
 
 End Class
