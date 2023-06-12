@@ -1,6 +1,10 @@
-﻿Public Class FrmAlmacen
+﻿Imports System.Collections.ObjectModel
+Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
+Public Class FrmAlmacen
     Private Sub FrmAlmacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ControlGeneral.Conectar()
+        ListadoAlmacenes()
     End Sub
 
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GboxListado.Enter
@@ -26,6 +30,20 @@
         '  Dim Tabla As New Sql
         ' nuevo comentario
         'linea
+        Dim Tabla As New ADODB.Recordset
+        Dim Campo As String
+
+        Tabla = ControlAlmacenes.ObtieneAlmacenes("", "")
+
+        '        ListaDatos.ListItems.Clear
+        Do While Not Tabla.EOF
+            '           Set itmX = ListaDatos.ListItems.Add(, , CStr(Tabla.Fields("almacencod")))
+            '            itmX.SubItems(1) = CStr(Tabla.Fields("almacendes"))
+            Campo = Tabla.Fields("almacendes").Value
+            MessageBox.Show(Tabla.Fields("almacendes").Value)
+            Tabla.MoveNext()
+        Loop
+
     End Sub
 
 End Class
