@@ -13,7 +13,7 @@ Public Class FormLogin
         Dim username As String = txtUser.Text
         Dim password As String = txtPass.Text
 
-        If AuthenticateUser(username, password) Then
+        If AutenticacionUsuario(username, password) Then
             MessageBox.Show("Inicio de sesión exitoso")
             ' Aquí puedes redirigir al usuario a la página principal u otra funcionalidad
             ' Mensaje de inicio
@@ -22,7 +22,7 @@ Public Class FormLogin
         End If
     End Sub
 
-    Private Function AuthenticateUser(username As String, password As String) As Boolean
+    Private Function AutenticacionUsuario(username As String, password As String) As Boolean
         Using connection As New SqlConnection()
 
             connection.Open()
@@ -38,5 +38,15 @@ Public Class FormLogin
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         ControlGeneral.Desconectar()
+    End Sub
+
+    Private Sub lblContrasena_Click(sender As Object, e As EventArgs) Handles lblContrasena.Click
+
+    End Sub
+
+    Private Sub txtUser_TextChanged(sender As Object, e As EventArgs) Handles txtUser.TextChanged
+    End Sub
+
+    Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPass.TextChanged
     End Sub
 End Class
