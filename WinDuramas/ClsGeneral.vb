@@ -47,6 +47,7 @@ Public Class ClsGeneral
         Conexion = Nothing
         '     Conexion1.Close
         '     Set Conexion1 = Nothing
+        End
     End Sub
 
 End Class
