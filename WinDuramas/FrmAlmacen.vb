@@ -46,4 +46,7 @@ Public Class FrmAlmacen
 
     End Sub
 
+    Private Sub cmdNuevo_Click(sender As Object, e As EventArgs) Handles cmdNuevo.Click
+
+    End Sub
 End Class
