@@ -13,10 +13,8 @@ Public Class FormLogin
         Dim username As String = txtUser.Text
         Dim password As String = txtPass.Text
 
-        If AutenticacionUsuario(username, password) Then
+        If ControlUsuarios.RevisaUsuario(username, password, "usucod") = 1 Then
             MessageBox.Show("Inicio de sesión exitoso")
-            ' Aquí puedes redirigir al usuario a la página principal u otra funcionalidad
-            ' Mensaje de inicio
             FrmAlmacen.Show()
         Else
             MessageBox.Show("Nombre de usuario o contraseña incorrectos")

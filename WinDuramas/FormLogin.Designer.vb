@@ -36,43 +36,41 @@ Partial Class FormLogin
         ' lblUser
         ' 
         lblUser.AutoSize = True
-        lblUser.Location = New Point(144, 47)
+        lblUser.Location = New Point(165, 63)
         lblUser.Name = "lblUser"
-        lblUser.Size = New Size(50, 15)
+        lblUser.Size = New Size(62, 20)
         lblUser.TabIndex = 0
         lblUser.Text = "Usuario:"
         ' 
         ' lblContrasena
         ' 
         lblContrasena.AutoSize = True
-        lblContrasena.Location = New Point(144, 90)
+        lblContrasena.Location = New Point(165, 120)
         lblContrasena.Name = "lblContrasena"
-        lblContrasena.Size = New Size(70, 15)
+        lblContrasena.Size = New Size(86, 20)
         lblContrasena.TabIndex = 1
         lblContrasena.Text = "Contraseña:"
         ' 
         ' txtUser
         ' 
-        txtUser.Location = New Point(225, 42)
-        txtUser.Margin = New Padding(3, 2, 3, 2)
+        txtUser.Location = New Point(257, 56)
         txtUser.Name = "txtUser"
-        txtUser.Size = New Size(115, 23)
+        txtUser.Size = New Size(131, 27)
         txtUser.TabIndex = 2
         ' 
         ' txtPass
         ' 
-        txtPass.Location = New Point(225, 88)
-        txtPass.Margin = New Padding(3, 2, 3, 2)
+        txtPass.Location = New Point(257, 117)
         txtPass.Name = "txtPass"
-        txtPass.Size = New Size(115, 23)
+        txtPass.PasswordChar = "*"c
+        txtPass.Size = New Size(131, 27)
         txtPass.TabIndex = 3
         ' 
         ' btnIngresar
         ' 
-        btnIngresar.Location = New Point(127, 140)
-        btnIngresar.Margin = New Padding(3, 2, 3, 2)
+        btnIngresar.Location = New Point(145, 187)
         btnIngresar.Name = "btnIngresar"
-        btnIngresar.Size = New Size(85, 27)
+        btnIngresar.Size = New Size(97, 36)
         btnIngresar.TabIndex = 4
         btnIngresar.Text = "Ingresar"
         btnIngresar.UseVisualStyleBackColor = True
@@ -80,28 +78,26 @@ Partial Class FormLogin
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(51, 47)
-        PictureBox1.Margin = New Padding(3, 2, 3, 2)
+        PictureBox1.Location = New Point(58, 63)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(66, 62)
+        PictureBox1.Size = New Size(75, 83)
         PictureBox1.TabIndex = 5
         PictureBox1.TabStop = False
         ' 
         ' btnCancelar
         ' 
-        btnCancelar.Location = New Point(255, 140)
-        btnCancelar.Margin = New Padding(3, 2, 3, 2)
+        btnCancelar.Location = New Point(291, 187)
         btnCancelar.Name = "btnCancelar"
-        btnCancelar.Size = New Size(85, 27)
+        btnCancelar.Size = New Size(97, 36)
         btnCancelar.TabIndex = 6
         btnCancelar.Text = "Cancelar"
         btnCancelar.UseVisualStyleBackColor = True
         ' 
         ' FormLogin
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(424, 194)
+        ClientSize = New Size(485, 259)
         ControlBox = False
         Controls.Add(btnCancelar)
         Controls.Add(PictureBox1)
@@ -110,7 +106,6 @@ Partial Class FormLogin
         Controls.Add(txtUser)
         Controls.Add(lblContrasena)
         Controls.Add(lblUser)
-        Margin = New Padding(3, 2, 3, 2)
         MaximizeBox = False
         MinimizeBox = False
         Name = "FormLogin"

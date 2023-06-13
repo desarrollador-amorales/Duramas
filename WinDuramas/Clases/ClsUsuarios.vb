@@ -2,9 +2,7 @@
 
     Function RevisaUsuario(Usuario As String, Clave As String, Tipo As String) As Integer
         Dim Tabla As New ADODB.Recordset
-
         RevisaUsuario = 1
-        'Tabla.Open "select * from usuarios where usuide='" + Usuario + "'", Conexion.ConnectionString, adOpenDynamic, adLockOptimistic
         Tabla = Conexion.Execute("select * from usuarios where usuide='" + Usuario + "'")
         If Not Tabla.EOF Then
             If Tabla.Fields("ususistema").Value = 0 Then
