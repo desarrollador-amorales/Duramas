@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "WinDuramas": {
+      "commandName": "Project",
+      "nativeDebugging": true,
+      "sqlDebugging": true
+    }
+  }
+}
