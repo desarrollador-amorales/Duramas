@@ -49,4 +49,8 @@ Public Class FrmAlmacen
     Private Sub cmdNuevo_Click(sender As Object, e As EventArgs) Handles cmdNuevo.Click
 
     End Sub
+
+    Private Sub TxtCriterio1_TextChanged(sender As Object, e As EventArgs) Handles TxtCriterio1.TextChanged
+
+    End Sub
 End Class

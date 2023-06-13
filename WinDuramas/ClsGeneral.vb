@@ -31,21 +31,6 @@ ConectarErrores:
 
     End Function
 
-    Sub Conectar1()
-
-        Try
-            Conexion.Open()
-            ' La conexión se ha abierto correctamente
-            ' Puedes realizar operaciones en la base de datos aquí
-        Catch ex As Exception
-            ' Ocurrió un error al abrir la conexión
-            Console.WriteLine("Error al abrir la conexión: " & ex.Message)
-        Finally
-            ' Asegúrate de cerrar la conexión cuando hayas terminado
-        End Try
-
-    End Sub
-
     Friend Sub Desconectar()
         ' Throw New NotImplementedException()
         Conexion.Close()

@@ -33,3 +33,38 @@ C:\Duramas2023\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.genrun
 C:\Duramas2023\Repositorio\WinDuramas\obj\Debug\net6.0-windows\ref\WinDuramas.dll
 C:\Duramas2023\Repositorio\WinDuramas\obj\Debug\net6.0-windows\Interop.ADODB.dll
 C:\Duramas2023\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.vbproj.ResolveComReference.cache
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\WinDuramas.exe
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\WinDuramas.deps.json
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\WinDuramas.runtimeconfig.json
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\WinDuramas.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\WinDuramas.pdb
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\System.Data.Odbc.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\System.Text.Encoding.CodePages.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\runtimes\freebsd\lib\net6.0\System.Data.Odbc.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\runtimes\linux\lib\net6.0\System.Data.Odbc.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\runtimes\osx\lib\net6.0\System.Data.Odbc.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.Odbc.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.vbproj.AssemblyReference.cache
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\Interop.ADODB.dll
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.vbproj.ResolveComReference.cache
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.FormLogin.resources
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.FrmAlmacen.resources
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.Resources.resources
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.vbproj.GenerateResource.cache
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.AssemblyInfoInputs.cache
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.AssemblyInfo.vb
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.vbproj.CoreCompileInputs.cache
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.vbproj.CopyComplete
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.dll
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\refint\WinDuramas.dll
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.pdb
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.genruntimeconfig.cache
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\ref\WinDuramas.dll
