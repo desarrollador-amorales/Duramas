@@ -104,7 +104,7 @@ Partial Class FrmAlmacen
         ' Button3
         ' 
         Button3.Image = CType(resources.GetObject("Button3.Image"), Image)
-        Button3.Location = New Point(231, 13)
+        Button3.Location = New Point(229, 13)
         Button3.Margin = New Padding(3, 2, 3, 2)
         Button3.Name = "Button3"
         Button3.Size = New Size(47, 39)
@@ -114,7 +114,7 @@ Partial Class FrmAlmacen
         ' Button2
         ' 
         Button2.Image = CType(resources.GetObject("Button2.Image"), Image)
-        Button2.Location = New Point(162, 13)
+        Button2.Location = New Point(163, 13)
         Button2.Margin = New Padding(3, 2, 3, 2)
         Button2.Name = "Button2"
         Button2.Size = New Size(47, 39)
@@ -124,7 +124,7 @@ Partial Class FrmAlmacen
         ' Button1
         ' 
         Button1.Image = CType(resources.GetObject("Button1.Image"), Image)
-        Button1.Location = New Point(98, 13)
+        Button1.Location = New Point(97, 13)
         Button1.Margin = New Padding(3, 2, 3, 2)
         Button1.Name = "Button1"
         Button1.Size = New Size(47, 39)
