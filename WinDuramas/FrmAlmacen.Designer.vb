@@ -29,14 +29,25 @@ Partial Class FrmAlmacen
         ListaDatos = New ListView()
         GroupBox1 = New GroupBox()
         CmdSalir = New Button()
-        Button3 = New Button()
-        Button2 = New Button()
-        Button1 = New Button()
+        CmdImprimir = New Button()
+        CmdEliminar = New Button()
+        CmdGrabar = New Button()
         cmdNuevo = New Button()
         GroupBox2 = New GroupBox()
         GroupBox3 = New GroupBox()
+        TxtCampos0 = New TextBox()
+        Label1 = New Label()
+        TxtCampos1 = New TextBox()
+        Label2 = New Label()
+        TxtCampos2 = New TextBox()
+        Label3 = New Label()
+        TxtCampos3 = New TextBox()
+        Label4 = New Label()
+        TxtCampos4 = New TextBox()
+        Label5 = New Label()
         GboxListado.SuspendLayout()
         GroupBox1.SuspendLayout()
+        GroupBox3.SuspendLayout()
         SuspendLayout()
         ' 
         ' GboxListado
@@ -54,7 +65,7 @@ Partial Class FrmAlmacen
         ' 
         ' TxtCriterio1
         ' 
-        TxtCriterio1.Location = New Point(88, 21)
+        TxtCriterio1.Location = New Point(103, 21)
         TxtCriterio1.Margin = New Padding(3, 2, 3, 2)
         TxtCriterio1.Name = "TxtCriterio1"
         TxtCriterio1.Size = New Size(271, 23)
@@ -62,7 +73,7 @@ Partial Class FrmAlmacen
         ' 
         ' TxtCriterio
         ' 
-        TxtCriterio.Location = New Point(18, 21)
+        TxtCriterio.Location = New Point(33, 21)
         TxtCriterio.Name = "TxtCriterio"
         TxtCriterio.Size = New Size(64, 23)
         TxtCriterio.TabIndex = 1
@@ -70,7 +81,7 @@ Partial Class FrmAlmacen
         ' ListaDatos
         ' 
         ListaDatos.AllowColumnReorder = True
-        ListaDatos.Location = New Point(6, 50)
+        ListaDatos.Location = New Point(18, 48)
         ListaDatos.Margin = New Padding(3, 2, 3, 2)
         ListaDatos.Name = "ListaDatos"
         ListaDatos.Size = New Size(368, 414)
@@ -81,9 +92,9 @@ Partial Class FrmAlmacen
         ' GroupBox1
         ' 
         GroupBox1.Controls.Add(CmdSalir)
-        GroupBox1.Controls.Add(Button3)
-        GroupBox1.Controls.Add(Button2)
-        GroupBox1.Controls.Add(Button1)
+        GroupBox1.Controls.Add(CmdImprimir)
+        GroupBox1.Controls.Add(CmdEliminar)
+        GroupBox1.Controls.Add(CmdGrabar)
         GroupBox1.Controls.Add(cmdNuevo)
         GroupBox1.Location = New Point(423, 428)
         GroupBox1.Name = "GroupBox1"
@@ -94,47 +105,47 @@ Partial Class FrmAlmacen
         ' CmdSalir
         ' 
         CmdSalir.Image = CType(resources.GetObject("CmdSalir.Image"), Image)
-        CmdSalir.Location = New Point(295, 13)
+        CmdSalir.Location = New Point(290, 13)
         CmdSalir.Margin = New Padding(3, 2, 3, 2)
         CmdSalir.Name = "CmdSalir"
         CmdSalir.Size = New Size(47, 39)
         CmdSalir.TabIndex = 4
         CmdSalir.UseVisualStyleBackColor = True
         ' 
-        ' Button3
+        ' CmdImprimir
         ' 
-        Button3.Image = CType(resources.GetObject("Button3.Image"), Image)
-        Button3.Location = New Point(229, 13)
-        Button3.Margin = New Padding(3, 2, 3, 2)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(47, 39)
-        Button3.TabIndex = 3
-        Button3.UseVisualStyleBackColor = True
+        CmdImprimir.Image = CType(resources.GetObject("CmdImprimir.Image"), Image)
+        CmdImprimir.Location = New Point(224, 13)
+        CmdImprimir.Margin = New Padding(3, 2, 3, 2)
+        CmdImprimir.Name = "CmdImprimir"
+        CmdImprimir.Size = New Size(47, 39)
+        CmdImprimir.TabIndex = 3
+        CmdImprimir.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' CmdEliminar
         ' 
-        Button2.Image = CType(resources.GetObject("Button2.Image"), Image)
-        Button2.Location = New Point(163, 13)
-        Button2.Margin = New Padding(3, 2, 3, 2)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(47, 39)
-        Button2.TabIndex = 2
-        Button2.UseVisualStyleBackColor = True
+        CmdEliminar.Image = CType(resources.GetObject("CmdEliminar.Image"), Image)
+        CmdEliminar.Location = New Point(158, 13)
+        CmdEliminar.Margin = New Padding(3, 2, 3, 2)
+        CmdEliminar.Name = "CmdEliminar"
+        CmdEliminar.Size = New Size(47, 39)
+        CmdEliminar.TabIndex = 2
+        CmdEliminar.UseVisualStyleBackColor = True
         ' 
-        ' Button1
+        ' CmdGrabar
         ' 
-        Button1.Image = CType(resources.GetObject("Button1.Image"), Image)
-        Button1.Location = New Point(97, 13)
-        Button1.Margin = New Padding(3, 2, 3, 2)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(47, 39)
-        Button1.TabIndex = 1
-        Button1.UseVisualStyleBackColor = True
+        CmdGrabar.Image = CType(resources.GetObject("CmdGrabar.Image"), Image)
+        CmdGrabar.Location = New Point(92, 13)
+        CmdGrabar.Margin = New Padding(3, 2, 3, 2)
+        CmdGrabar.Name = "CmdGrabar"
+        CmdGrabar.Size = New Size(47, 39)
+        CmdGrabar.TabIndex = 1
+        CmdGrabar.UseVisualStyleBackColor = True
         ' 
         ' cmdNuevo
         ' 
         cmdNuevo.Image = CType(resources.GetObject("cmdNuevo.Image"), Image)
-        cmdNuevo.Location = New Point(31, 13)
+        cmdNuevo.Location = New Point(26, 13)
         cmdNuevo.Margin = New Padding(3, 2, 3, 2)
         cmdNuevo.Name = "cmdNuevo"
         cmdNuevo.Size = New Size(47, 39)
@@ -153,6 +164,16 @@ Partial Class FrmAlmacen
         ' 
         ' GroupBox3
         ' 
+        GroupBox3.Controls.Add(TxtCampos4)
+        GroupBox3.Controls.Add(Label5)
+        GroupBox3.Controls.Add(TxtCampos3)
+        GroupBox3.Controls.Add(Label4)
+        GroupBox3.Controls.Add(TxtCampos2)
+        GroupBox3.Controls.Add(Label3)
+        GroupBox3.Controls.Add(TxtCampos1)
+        GroupBox3.Controls.Add(Label2)
+        GroupBox3.Controls.Add(TxtCampos0)
+        GroupBox3.Controls.Add(Label1)
         GroupBox3.ForeColor = Color.FromArgb(CByte(0), CByte(0), CByte(192))
         GroupBox3.Location = New Point(423, 12)
         GroupBox3.Name = "GroupBox3"
@@ -161,21 +182,106 @@ Partial Class FrmAlmacen
         GroupBox3.TabStop = False
         GroupBox3.Text = "Datos del Almacén"
         ' 
+        ' TxtCampos0
+        ' 
+        TxtCampos0.Location = New Point(102, 36)
+        TxtCampos0.Name = "TxtCampos0"
+        TxtCampos0.Size = New Size(79, 23)
+        TxtCampos0.TabIndex = 2
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(44, 39)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(49, 15)
+        Label1.TabIndex = 0
+        Label1.Text = "Código:"
+        ' 
+        ' TxtCampos1
+        ' 
+        TxtCampos1.Location = New Point(102, 65)
+        TxtCampos1.Name = "TxtCampos1"
+        TxtCampos1.Size = New Size(244, 23)
+        TxtCampos1.TabIndex = 4
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(21, 68)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(72, 15)
+        Label2.TabIndex = 3
+        Label2.Text = "Descripción:"
+        ' 
+        ' TxtCampos2
+        ' 
+        TxtCampos2.Location = New Point(102, 94)
+        TxtCampos2.Name = "TxtCampos2"
+        TxtCampos2.Size = New Size(136, 23)
+        TxtCampos2.TabIndex = 6
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(60, 97)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(33, 15)
+        Label3.TabIndex = 5
+        Label3.Text = "RUC:"
+        ' 
+        ' TxtCampos3
+        ' 
+        TxtCampos3.Location = New Point(102, 123)
+        TxtCampos3.Name = "TxtCampos3"
+        TxtCampos3.Size = New Size(79, 23)
+        TxtCampos3.TabIndex = 8
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(58, 126)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(35, 15)
+        Label4.TabIndex = 7
+        Label4.Text = "Serie:"
+        ' 
+        ' TxtCampos4
+        ' 
+        TxtCampos4.Location = New Point(102, 152)
+        TxtCampos4.Multiline = True
+        TxtCampos4.Name = "TxtCampos4"
+        TxtCampos4.ScrollBars = ScrollBars.Vertical
+        TxtCampos4.Size = New Size(244, 152)
+        TxtCampos4.TabIndex = 10
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(47, 155)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(46, 15)
+        Label5.TabIndex = 9
+        Label5.Text = "Detalle:"
+        ' 
         ' FrmAlmacen
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 505)
+        ControlBox = False
         Controls.Add(GroupBox3)
         Controls.Add(GroupBox1)
         Controls.Add(GboxListado)
         MaximizeBox = False
         MinimizeBox = False
         Name = "FrmAlmacen"
-        Text = "FrmAlmacen"
+        Text = "Mantenimiento de Almacenes"
         GboxListado.ResumeLayout(False)
         GboxListado.PerformLayout()
         GroupBox1.ResumeLayout(False)
+        GroupBox3.ResumeLayout(False)
+        GroupBox3.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -187,8 +293,18 @@ Partial Class FrmAlmacen
     Friend WithEvents cmdNuevo As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents CmdSalir As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents CmdImprimir As Button
+    Friend WithEvents CmdEliminar As Button
+    Friend WithEvents CmdGrabar As Button
     Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents TxtCampos0 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TxtCampos1 As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TxtCampos4 As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TxtCampos3 As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TxtCampos2 As TextBox
+    Friend WithEvents Label3 As Label
 End Class
