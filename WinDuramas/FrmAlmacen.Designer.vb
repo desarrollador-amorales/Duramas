@@ -35,16 +35,16 @@ Partial Class FrmAlmacen
         cmdNuevo = New Button()
         GroupBox2 = New GroupBox()
         GroupBox3 = New GroupBox()
-        TxtCampos0 = New TextBox()
-        Label1 = New Label()
-        TxtCampos1 = New TextBox()
-        Label2 = New Label()
-        TxtCampos2 = New TextBox()
-        Label3 = New Label()
-        TxtCampos3 = New TextBox()
-        Label4 = New Label()
         TxtCampos4 = New TextBox()
         Label5 = New Label()
+        TxtCampos3 = New TextBox()
+        Label4 = New Label()
+        TxtCampos2 = New TextBox()
+        Label3 = New Label()
+        TxtCampos1 = New TextBox()
+        Label2 = New Label()
+        TxtCampos0 = New TextBox()
+        Label1 = New Label()
         GboxListado.SuspendLayout()
         GroupBox1.SuspendLayout()
         GroupBox3.SuspendLayout()
@@ -81,6 +81,7 @@ Partial Class FrmAlmacen
         ' ListaDatos
         ' 
         ListaDatos.AllowColumnReorder = True
+        ListaDatos.FullRowSelect = True
         ListaDatos.Location = New Point(18, 48)
         ListaDatos.Margin = New Padding(3, 2, 3, 2)
         ListaDatos.Name = "ListaDatos"
@@ -182,70 +183,6 @@ Partial Class FrmAlmacen
         GroupBox3.TabStop = False
         GroupBox3.Text = "Datos del Almacén"
         ' 
-        ' TxtCampos0
-        ' 
-        TxtCampos0.Location = New Point(102, 36)
-        TxtCampos0.Name = "TxtCampos0"
-        TxtCampos0.Size = New Size(79, 23)
-        TxtCampos0.TabIndex = 2
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(44, 39)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(49, 15)
-        Label1.TabIndex = 0
-        Label1.Text = "Código:"
-        ' 
-        ' TxtCampos1
-        ' 
-        TxtCampos1.Location = New Point(102, 65)
-        TxtCampos1.Name = "TxtCampos1"
-        TxtCampos1.Size = New Size(244, 23)
-        TxtCampos1.TabIndex = 4
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(21, 68)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(72, 15)
-        Label2.TabIndex = 3
-        Label2.Text = "Descripción:"
-        ' 
-        ' TxtCampos2
-        ' 
-        TxtCampos2.Location = New Point(102, 94)
-        TxtCampos2.Name = "TxtCampos2"
-        TxtCampos2.Size = New Size(136, 23)
-        TxtCampos2.TabIndex = 6
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(60, 97)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(33, 15)
-        Label3.TabIndex = 5
-        Label3.Text = "RUC:"
-        ' 
-        ' TxtCampos3
-        ' 
-        TxtCampos3.Location = New Point(102, 123)
-        TxtCampos3.Name = "TxtCampos3"
-        TxtCampos3.Size = New Size(79, 23)
-        TxtCampos3.TabIndex = 8
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(58, 126)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(35, 15)
-        Label4.TabIndex = 7
-        Label4.Text = "Serie:"
-        ' 
         ' TxtCampos4
         ' 
         TxtCampos4.Location = New Point(102, 152)
@@ -264,6 +201,70 @@ Partial Class FrmAlmacen
         Label5.TabIndex = 9
         Label5.Text = "Detalle:"
         ' 
+        ' TxtCampos3
+        ' 
+        TxtCampos3.Location = New Point(102, 123)
+        TxtCampos3.Name = "TxtCampos3"
+        TxtCampos3.Size = New Size(79, 23)
+        TxtCampos3.TabIndex = 8
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(58, 126)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(35, 15)
+        Label4.TabIndex = 7
+        Label4.Text = "Serie:"
+        ' 
+        ' TxtCampos2
+        ' 
+        TxtCampos2.Location = New Point(102, 94)
+        TxtCampos2.Name = "TxtCampos2"
+        TxtCampos2.Size = New Size(136, 23)
+        TxtCampos2.TabIndex = 6
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(60, 97)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(33, 15)
+        Label3.TabIndex = 5
+        Label3.Text = "RUC:"
+        ' 
+        ' TxtCampos1
+        ' 
+        TxtCampos1.Location = New Point(102, 65)
+        TxtCampos1.Name = "TxtCampos1"
+        TxtCampos1.Size = New Size(244, 23)
+        TxtCampos1.TabIndex = 4
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(21, 68)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(72, 15)
+        Label2.TabIndex = 3
+        Label2.Text = "Descripción:"
+        ' 
+        ' TxtCampos0
+        ' 
+        TxtCampos0.Location = New Point(102, 36)
+        TxtCampos0.Name = "TxtCampos0"
+        TxtCampos0.Size = New Size(79, 23)
+        TxtCampos0.TabIndex = 2
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(44, 39)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(49, 15)
+        Label1.TabIndex = 0
+        Label1.Text = "Código:"
+        ' 
         ' FrmAlmacen
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -276,6 +277,7 @@ Partial Class FrmAlmacen
         MaximizeBox = False
         MinimizeBox = False
         Name = "FrmAlmacen"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Mantenimiento de Almacenes"
         GboxListado.ResumeLayout(False)
         GboxListado.PerformLayout()

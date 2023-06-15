@@ -14,6 +14,7 @@ Public Class FormLogin
         Dim password As String = txtPass.Text
 
         If ControlUsuarios.RevisaUsuario(username, password, "usucod") = 1 Then
+            CodigoUsuario = username
             MessageBox.Show("Inicio de sesión exitoso")
             FrmAlmacen.Show()
         Else

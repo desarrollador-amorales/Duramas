@@ -12,7 +12,12 @@ Public Class FrmAlmacen
 
         TxtCriterio.Text = ""
         TxtCriterio1.Text = ""
-        '        cmdEliminar.Enabled = False
+        TxtCampos0.Text = ""
+        TxtCampos1.Text = ""
+        TxtCampos2.Text = ""
+        TxtCampos3.Text = ""
+        TxtCampos4.Text = ""
+        CmdEliminar.Enabled = False
         Nuevo = 1
     End Sub
 
@@ -20,8 +25,7 @@ Public Class FrmAlmacen
 
 
         '        MDIPrincipal.MnuOpcion4(0).Enabled = False
-        '        Me.Left = ((MDIPrincipal.Width - MDIPrincipal.Picture1.Width - Me.Width) / 2)
-        '        Me.Top = ((MDIPrincipal.Height - Me.Height) / 2) - 500
+
         ListaDatos.Columns.Add("Almacén", 80, 0)
         ListaDatos.Columns.Add("Descripción", 250, 0)
         ListaDatos.Alignment = 0
@@ -34,7 +38,10 @@ Public Class FrmAlmacen
     End Sub
 
     Private Sub ListaDatos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListaDatos.SelectedIndexChanged
-
+        If ListaDatos.SelectedItems.Count > 0 Then
+            TxtCampos0.Text = ListaDatos.SelectedItems(0).Text
+            SacaDatos()
+        End If
     End Sub
 
     Private Sub ListaDatos_ColumnClick(sender As Object, e As ColumnClickEventArgs) Handles ListaDatos.ColumnClick
@@ -65,7 +72,7 @@ Public Class FrmAlmacen
     End Sub
 
     Private Sub cmdNuevo_Click(sender As Object, e As EventArgs) Handles cmdNuevo.Click
-
+        EnceraPantalla()
     End Sub
 
     Private Sub TxtCriterio_TextChanged(sender As Object, e As EventArgs) Handles TxtCriterio.TextChanged
@@ -84,51 +91,93 @@ Public Class FrmAlmacen
         Close()
     End Sub
 
-    Private Sub CmdImprimir_Click(sender As Object, e As EventArgs) Handles CmdImprimir.Click
+    Sub SacaDatos()
+        Dim Tabla As New ADODB.Recordset
 
+        TxtCampos1.Text = ""
+        TxtCampos2.Text = ""
+        TxtCampos3.Text = ""
+        TxtCampos4.Text = ""
+
+        Tabla = ControlAlmacenes.BuscaAlmacen(TxtCampos0.Text)
+        If Not Tabla.EOF Then
+            TxtCampos1.Text = Tabla.Fields("almacendes").Value
+            If Not IsDBNull(Tabla.Fields("almacenruc").Value) Then
+                TxtCampos2.Text = Tabla.Fields("almacenruc").Value
+            End If
+            If Not IsDBNull(Tabla.Fields("almacenserie").Value) Then
+                TxtCampos3.Text = Tabla.Fields("almacenserie").Value
+            End If
+            If Not IsDBNull(Tabla.Fields("detalle").Value) Then
+                TxtCampos4.Text = Tabla.Fields("detalle").Value
+            End If
+            If Not IsDBNull(Tabla.Fields("estado").Value) Then
+                Estado = Tabla.Fields("estado").Value
+            End If
+            CmdGrabar.Enabled = True
+            CmdEliminar.Enabled = True
+            Nuevo = 0
+        Else
+            TxtCampos1.Text = ""
+            TxtCampos2.Text = ""
+            TxtCampos3.Text = ""
+            TxtCampos4.Text = ""
+            Estado = "N"
+            CmdGrabar.Enabled = True
+            CmdEliminar.Enabled = False
+            Nuevo = 1
+        End If
     End Sub
 
     Private Sub CmdEliminar_Click(sender As Object, e As EventArgs) Handles CmdEliminar.Click
+
+        If MessageBox.Show("Esta seguro de eliminar el ALMACEN ?...") = DialogResult.No Then
+            Exit Sub
+        End If
+        ControlAlmacenes.EliminaAlmacen(TxtCampos0.Text)
+        TxtCampos0.Text = ""
+        TxtCampos1.Text = ""
+        TxtCampos2.Text = ""
+        TxtCampos3.Text = ""
+        TxtCampos4.Text = ""
+        EnceraPantalla()
+        ListadoAlmacenes()
+        Nuevo = 1
+
     End Sub
 
     Private Sub CmdGrabar_Click(sender As Object, e As EventArgs) Handles CmdGrabar.Click
-    End Sub
+        If Len(Trim(TxtCampos0.Text)) = 0 Then
+            MessageBox.Show("Ingrese CODIGO DEL ALMACEN")
+            TxtCampos0.Focus()
+            Exit Sub
+        End If
+        If Len(Trim(TxtCampos1.Text)) = 0 Then
+            MessageBox.Show("Ingrese DESCRIPCION DEL ALMACEN")
+            TxtCampos1.Focus()
+            Exit Sub
+        End If
+        If Len(Trim(TxtCampos2.Text)) = 0 Then
+            MessageBox.Show("Ingrese RUC DEL ALMACEN")
+            TxtCampos2.Focus()
+            Exit Sub
+        End If
+        If Len(Trim(TxtCampos3.Text)) = 0 Then
+            MessageBox.Show("Ingrese SERIE DEL ALMACEN")
+            TxtCampos3.Focus()
+            Exit Sub
+        End If
+        If Nuevo = 1 Then
+            ControlAlmacenes.IngresaAlmacen(TxtCampos0.Text, TxtCampos1.Text, TxtCampos2.Text, TxtCampos3.Text, "N", CodigoUsuario, TxtCampos4.Text)
+        Else
+            ControlAlmacenes.ActualizaAlmacen(TxtCampos0.Text, TxtCampos1.Text, TxtCampos2.Text, TxtCampos3.Text, Estado, CodigoUsuario, TxtCampos4.Text)
+        End If
 
-    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
+        ControlAlmacenes.IngresaComprobanteAlmacen(TxtCampos0.Text)
+        CmdEliminar.Enabled = False
+        EnceraPantalla()
+        ListadoAlmacenes()
+        Nuevo = 1
 
-    End Sub
-
-    Private Sub TxtCampos0_TextChanged(sender As Object, e As EventArgs) Handles TxtCampos0.TextChanged
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TxtCampos1.TextChanged
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TxtCampos3.TextChanged
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-    End Sub
-
-    Private Sub TextBox1_TextChanged_1(sender As Object, e As EventArgs) Handles TxtCampos2.TextChanged
-    End Sub
-
-    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TxtCampos4.TextChanged
     End Sub
 End Class

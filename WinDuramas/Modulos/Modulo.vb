@@ -7,4 +7,5 @@ Module Modulo
     Public CadenaConexion As String = "Driver=DSNSai;uid=SA;pwd=AngJua1289"
     Public Conexion As New ADODB.Connection
 
+    Public CodigoUsuario As String
 End Module
