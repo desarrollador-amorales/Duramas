@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Duramas2023\\Repositorio\\WinDuramas\\WinDuramas.vbproj": {}
+    "D:\\Proyectos C#\\Repositorio\\WinDuramas\\WinDuramas.vbproj": {}
   },
   "projects": {
-    "C:\\Duramas2023\\Repositorio\\WinDuramas\\WinDuramas.vbproj": {
+    "D:\\Proyectos C#\\Repositorio\\WinDuramas\\WinDuramas.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Duramas2023\\Repositorio\\WinDuramas\\WinDuramas.vbproj",
+        "projectUniqueName": "D:\\Proyectos C#\\Repositorio\\WinDuramas\\WinDuramas.vbproj",
         "projectName": "WinDuramas",
-        "projectPath": "C:\\Duramas2023\\Repositorio\\WinDuramas\\WinDuramas.vbproj",
-        "packagesPath": "C:\\Users\\Sistemas\\.nuget\\packages\\",
-        "outputPath": "C:\\Duramas2023\\Repositorio\\WinDuramas\\obj\\",
+        "projectPath": "D:\\Proyectos C#\\Repositorio\\WinDuramas\\WinDuramas.vbproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos C#\\Repositorio\\WinDuramas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Sistemas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

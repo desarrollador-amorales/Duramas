@@ -11,3 +11,9 @@
 /.gitignore
 /.vs/WinDuramas/DesignTimeBuild/.dtbcache.v2
 /.gitignore
+/WinDuramas/obj/Debug/net6.0-windows/WinDuramas.assets.cache
+/WinDuramas/obj/Debug/net6.0-windows/WinDuramas.designer.deps.json
+/WinDuramas/obj/Debug/net6.0-windows/Interop.ADODB.dll
+/WinDuramas/obj/Debug/net6.0-windows/WinDuramas.GeneratedMSBuildEditorConfig.editorconfig
+/WinDuramas/obj/Debug/net6.0-windows/WinDuramas.vbproj.ResolveComReference.cache
+/WinDuramas/FrmAlmacen.Designer.vb
