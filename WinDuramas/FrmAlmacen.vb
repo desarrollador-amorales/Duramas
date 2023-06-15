@@ -57,7 +57,7 @@ Public Class FrmAlmacen
         Do While Not Tabla.EOF
             ItmX = ListaDatos.Items.Add(CStr(Tabla.Fields("almacencod").Value))
             ItmX.SubItems.Add(CStr(Tabla.Fields("almacendes").Value))
-            '            ItmX.SubItems.Add(CStr(Tabla.Fields("almacendes")))
+            '          ItmX.SubItems.Add(CStr(Tabla.Fields("almacendes")))
 
             Tabla.MoveNext()
         Loop
