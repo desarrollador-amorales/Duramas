@@ -28,6 +28,10 @@ Partial Class MDIPrincipal
         MenuStrip = New MenuStrip()
         FileMenu = New ToolStripMenuItem()
         NewToolStripMenuItem = New ToolStripMenuItem()
+        RegistroDeItemsBodegaToolStripMenuItem = New ToolStripMenuItem()
+        IngresoDePreciosPorAlmacenToolStripMenuItem = New ToolStripMenuItem()
+        RegistroDeCostosToolStripMenuItem = New ToolStripMenuItem()
+        RegistroDeCostosToolStripMenuItem1 = New ToolStripMenuItem()
         OpenToolStripMenuItem = New ToolStripMenuItem()
         ToolStripSeparator3 = New ToolStripSeparator()
         SaveToolStripMenuItem = New ToolStripMenuItem()
@@ -65,6 +69,8 @@ Partial Class MDIPrincipal
         SearchToolStripMenuItem = New ToolStripMenuItem()
         ToolStripSeparator8 = New ToolStripSeparator()
         AboutToolStripMenuItem = New ToolStripMenuItem()
+        SRIToolStripMenuItem = New ToolStripMenuItem()
+        MantenimientosToolStripMenuItem = New ToolStripMenuItem()
         ToolStrip = New ToolStrip()
         NewToolStripButton = New ToolStripButton()
         OpenToolStripButton = New ToolStripButton()
@@ -77,6 +83,17 @@ Partial Class MDIPrincipal
         StatusStrip = New StatusStrip()
         ToolStripStatusLabel = New ToolStripStatusLabel()
         ToolTip = New ToolTip(components)
+        ActivarItemsDeImportacionParaFacturacionToolStripMenuItem = New ToolStripMenuItem()
+        TransaccionesToolStripMenuItem = New ToolStripMenuItem()
+        SesionDeToolStripMenuItem = New ToolStripMenuItem()
+        AprobacionDeTransferenciasDeMaterialToolStripMenuItem = New ToolStripMenuItem()
+        AprobarPackingListToolStripMenuItem = New ToolStripMenuItem()
+        IngresoDeRetazosToolStripMenuItem = New ToolStripMenuItem()
+        EgresoDeRetazosToolStripMenuItem = New ToolStripMenuItem()
+        SesionOrdenesPedidosPorAprobarToolStripMenuItem = New ToolStripMenuItem()
+        CierreMensualToolStripMenuItem = New ToolStripMenuItem()
+        StocksYPreciosToolStripMenuItem = New ToolStripMenuItem()
+        ExistenciaMenoresAlStockMinimoToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip.SuspendLayout()
         ToolStrip.SuspendLayout()
         StatusStrip.SuspendLayout()
@@ -84,12 +101,13 @@ Partial Class MDIPrincipal
         ' 
         ' MenuStrip
         ' 
-        MenuStrip.Items.AddRange(New ToolStripItem() {FileMenu, EditMenu, ViewMenu, ToolsMenu, WindowsMenu, HelpMenu})
+        MenuStrip.ImageScalingSize = New Size(20, 20)
+        MenuStrip.Items.AddRange(New ToolStripItem() {FileMenu, EditMenu, ViewMenu, ToolsMenu, WindowsMenu, HelpMenu, SRIToolStripMenuItem})
         MenuStrip.Location = New Point(0, 0)
         MenuStrip.MdiWindowListItem = WindowsMenu
         MenuStrip.Name = "MenuStrip"
-        MenuStrip.Padding = New Padding(7, 2, 0, 2)
-        MenuStrip.Size = New Size(737, 24)
+        MenuStrip.Padding = New Padding(8, 3, 0, 3)
+        MenuStrip.Size = New Size(842, 30)
         MenuStrip.TabIndex = 5
         MenuStrip.Text = "MenuStrip"
         ' 
@@ -98,51 +116,78 @@ Partial Class MDIPrincipal
         FileMenu.DropDownItems.AddRange(New ToolStripItem() {NewToolStripMenuItem, OpenToolStripMenuItem, ToolStripSeparator3, SaveToolStripMenuItem, SaveAsToolStripMenuItem, ToolStripSeparator4, PrintToolStripMenuItem, PrintPreviewToolStripMenuItem, PrintSetupToolStripMenuItem, ToolStripSeparator5, ExitToolStripMenuItem})
         FileMenu.ImageTransparentColor = SystemColors.ActiveBorder
         FileMenu.Name = "FileMenu"
-        FileMenu.Size = New Size(60, 20)
-        FileMenu.Text = "&Archivo"
+        FileMenu.Size = New Size(95, 24)
+        FileMenu.Text = "&Inventarios"
         ' 
         ' NewToolStripMenuItem
         ' 
+        NewToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {RegistroDeItemsBodegaToolStripMenuItem, IngresoDePreciosPorAlmacenToolStripMenuItem, RegistroDeCostosToolStripMenuItem, RegistroDeCostosToolStripMenuItem1, ActivarItemsDeImportacionParaFacturacionToolStripMenuItem})
         NewToolStripMenuItem.Image = CType(resources.GetObject("NewToolStripMenuItem.Image"), Image)
         NewToolStripMenuItem.ImageTransparentColor = Color.Black
         NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         NewToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.N
-        NewToolStripMenuItem.Size = New Size(206, 22)
-        NewToolStripMenuItem.Text = "&Nuevo"
+        NewToolStripMenuItem.Size = New Size(260, 26)
+        NewToolStripMenuItem.Text = "&Mantenimiento"
+        ' 
+        ' RegistroDeItemsBodegaToolStripMenuItem
+        ' 
+        RegistroDeItemsBodegaToolStripMenuItem.Name = "RegistroDeItemsBodegaToolStripMenuItem"
+        RegistroDeItemsBodegaToolStripMenuItem.Size = New Size(376, 26)
+        RegistroDeItemsBodegaToolStripMenuItem.Text = "Registro de Items/Bodega"
+        ' 
+        ' IngresoDePreciosPorAlmacenToolStripMenuItem
+        ' 
+        IngresoDePreciosPorAlmacenToolStripMenuItem.Name = "IngresoDePreciosPorAlmacenToolStripMenuItem"
+        IngresoDePreciosPorAlmacenToolStripMenuItem.Size = New Size(376, 26)
+        IngresoDePreciosPorAlmacenToolStripMenuItem.Text = "Ingreso de precios por almacen"
+        ' 
+        ' RegistroDeCostosToolStripMenuItem
+        ' 
+        RegistroDeCostosToolStripMenuItem.Name = "RegistroDeCostosToolStripMenuItem"
+        RegistroDeCostosToolStripMenuItem.Size = New Size(376, 26)
+        RegistroDeCostosToolStripMenuItem.Text = "Registro de Costos (Por Compras)"
+        ' 
+        ' RegistroDeCostosToolStripMenuItem1
+        ' 
+        RegistroDeCostosToolStripMenuItem1.Name = "RegistroDeCostosToolStripMenuItem1"
+        RegistroDeCostosToolStripMenuItem1.Size = New Size(376, 26)
+        RegistroDeCostosToolStripMenuItem1.Text = "Registro de Productos en Liquidacion"
         ' 
         ' OpenToolStripMenuItem
         ' 
+        OpenToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {TransaccionesToolStripMenuItem, SesionDeToolStripMenuItem, AprobacionDeTransferenciasDeMaterialToolStripMenuItem, AprobarPackingListToolStripMenuItem, IngresoDeRetazosToolStripMenuItem, EgresoDeRetazosToolStripMenuItem, SesionOrdenesPedidosPorAprobarToolStripMenuItem, CierreMensualToolStripMenuItem})
         OpenToolStripMenuItem.Image = CType(resources.GetObject("OpenToolStripMenuItem.Image"), Image)
         OpenToolStripMenuItem.ImageTransparentColor = Color.Black
         OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
         OpenToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.O
-        OpenToolStripMenuItem.Size = New Size(206, 22)
-        OpenToolStripMenuItem.Text = "&Abrir"
+        OpenToolStripMenuItem.Size = New Size(260, 26)
+        OpenToolStripMenuItem.Text = "&Procesos"
         ' 
         ' ToolStripSeparator3
         ' 
         ToolStripSeparator3.Name = "ToolStripSeparator3"
-        ToolStripSeparator3.Size = New Size(203, 6)
+        ToolStripSeparator3.Size = New Size(257, 6)
         ' 
         ' SaveToolStripMenuItem
         ' 
+        SaveToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {StocksYPreciosToolStripMenuItem, ExistenciaMenoresAlStockMinimoToolStripMenuItem})
         SaveToolStripMenuItem.Image = CType(resources.GetObject("SaveToolStripMenuItem.Image"), Image)
         SaveToolStripMenuItem.ImageTransparentColor = Color.Black
         SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         SaveToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.S
-        SaveToolStripMenuItem.Size = New Size(206, 22)
-        SaveToolStripMenuItem.Text = "&Guardar"
+        SaveToolStripMenuItem.Size = New Size(260, 26)
+        SaveToolStripMenuItem.Text = "&Reportes"
         ' 
         ' SaveAsToolStripMenuItem
         ' 
         SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-        SaveAsToolStripMenuItem.Size = New Size(206, 22)
+        SaveAsToolStripMenuItem.Size = New Size(260, 26)
         SaveAsToolStripMenuItem.Text = "Guardar &como"
         ' 
         ' ToolStripSeparator4
         ' 
         ToolStripSeparator4.Name = "ToolStripSeparator4"
-        ToolStripSeparator4.Size = New Size(203, 6)
+        ToolStripSeparator4.Size = New Size(257, 6)
         ' 
         ' PrintToolStripMenuItem
         ' 
@@ -150,7 +195,7 @@ Partial Class MDIPrincipal
         PrintToolStripMenuItem.ImageTransparentColor = Color.Black
         PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
         PrintToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.P
-        PrintToolStripMenuItem.Size = New Size(206, 22)
+        PrintToolStripMenuItem.Size = New Size(260, 26)
         PrintToolStripMenuItem.Text = "&Imprimir"
         ' 
         ' PrintPreviewToolStripMenuItem
@@ -158,32 +203,32 @@ Partial Class MDIPrincipal
         PrintPreviewToolStripMenuItem.Image = CType(resources.GetObject("PrintPreviewToolStripMenuItem.Image"), Image)
         PrintPreviewToolStripMenuItem.ImageTransparentColor = Color.Black
         PrintPreviewToolStripMenuItem.Name = "PrintPreviewToolStripMenuItem"
-        PrintPreviewToolStripMenuItem.Size = New Size(206, 22)
+        PrintPreviewToolStripMenuItem.Size = New Size(260, 26)
         PrintPreviewToolStripMenuItem.Text = "&Vista previa de impresión"
         ' 
         ' PrintSetupToolStripMenuItem
         ' 
         PrintSetupToolStripMenuItem.Name = "PrintSetupToolStripMenuItem"
-        PrintSetupToolStripMenuItem.Size = New Size(206, 22)
+        PrintSetupToolStripMenuItem.Size = New Size(260, 26)
         PrintSetupToolStripMenuItem.Text = "Configurar impresión"
         ' 
         ' ToolStripSeparator5
         ' 
         ToolStripSeparator5.Name = "ToolStripSeparator5"
-        ToolStripSeparator5.Size = New Size(203, 6)
+        ToolStripSeparator5.Size = New Size(257, 6)
         ' 
         ' ExitToolStripMenuItem
         ' 
         ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        ExitToolStripMenuItem.Size = New Size(206, 22)
+        ExitToolStripMenuItem.Size = New Size(260, 26)
         ExitToolStripMenuItem.Text = "&Salir"
         ' 
         ' EditMenu
         ' 
         EditMenu.DropDownItems.AddRange(New ToolStripItem() {UndoToolStripMenuItem, RedoToolStripMenuItem, ToolStripSeparator6, CutToolStripMenuItem, CopyToolStripMenuItem, PasteToolStripMenuItem, ToolStripSeparator7, SelectAllToolStripMenuItem})
         EditMenu.Name = "EditMenu"
-        EditMenu.Size = New Size(49, 20)
-        EditMenu.Text = "&Editar"
+        EditMenu.Size = New Size(82, 24)
+        EditMenu.Text = "&Compras"
         ' 
         ' UndoToolStripMenuItem
         ' 
@@ -191,7 +236,7 @@ Partial Class MDIPrincipal
         UndoToolStripMenuItem.ImageTransparentColor = Color.Black
         UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
         UndoToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.Z
-        UndoToolStripMenuItem.Size = New Size(204, 22)
+        UndoToolStripMenuItem.Size = New Size(256, 26)
         UndoToolStripMenuItem.Text = "&Deshacer"
         ' 
         ' RedoToolStripMenuItem
@@ -200,13 +245,13 @@ Partial Class MDIPrincipal
         RedoToolStripMenuItem.ImageTransparentColor = Color.Black
         RedoToolStripMenuItem.Name = "RedoToolStripMenuItem"
         RedoToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.Y
-        RedoToolStripMenuItem.Size = New Size(204, 22)
+        RedoToolStripMenuItem.Size = New Size(256, 26)
         RedoToolStripMenuItem.Text = "&Rehacer"
         ' 
         ' ToolStripSeparator6
         ' 
         ToolStripSeparator6.Name = "ToolStripSeparator6"
-        ToolStripSeparator6.Size = New Size(201, 6)
+        ToolStripSeparator6.Size = New Size(253, 6)
         ' 
         ' CutToolStripMenuItem
         ' 
@@ -214,7 +259,7 @@ Partial Class MDIPrincipal
         CutToolStripMenuItem.ImageTransparentColor = Color.Black
         CutToolStripMenuItem.Name = "CutToolStripMenuItem"
         CutToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.X
-        CutToolStripMenuItem.Size = New Size(204, 22)
+        CutToolStripMenuItem.Size = New Size(256, 26)
         CutToolStripMenuItem.Text = "Cor&tar"
         ' 
         ' CopyToolStripMenuItem
@@ -223,7 +268,7 @@ Partial Class MDIPrincipal
         CopyToolStripMenuItem.ImageTransparentColor = Color.Black
         CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
         CopyToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.C
-        CopyToolStripMenuItem.Size = New Size(204, 22)
+        CopyToolStripMenuItem.Size = New Size(256, 26)
         CopyToolStripMenuItem.Text = "&Copiar"
         ' 
         ' PasteToolStripMenuItem
@@ -232,27 +277,27 @@ Partial Class MDIPrincipal
         PasteToolStripMenuItem.ImageTransparentColor = Color.Black
         PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
         PasteToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.V
-        PasteToolStripMenuItem.Size = New Size(204, 22)
+        PasteToolStripMenuItem.Size = New Size(256, 26)
         PasteToolStripMenuItem.Text = "&Pegar"
         ' 
         ' ToolStripSeparator7
         ' 
         ToolStripSeparator7.Name = "ToolStripSeparator7"
-        ToolStripSeparator7.Size = New Size(201, 6)
+        ToolStripSeparator7.Size = New Size(253, 6)
         ' 
         ' SelectAllToolStripMenuItem
         ' 
         SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
         SelectAllToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.A
-        SelectAllToolStripMenuItem.Size = New Size(204, 22)
+        SelectAllToolStripMenuItem.Size = New Size(256, 26)
         SelectAllToolStripMenuItem.Text = "Seleccionar &todo"
         ' 
         ' ViewMenu
         ' 
         ViewMenu.DropDownItems.AddRange(New ToolStripItem() {ToolBarToolStripMenuItem, StatusBarToolStripMenuItem})
         ViewMenu.Name = "ViewMenu"
-        ViewMenu.Size = New Size(35, 20)
-        ViewMenu.Text = "&Ver"
+        ViewMenu.Size = New Size(66, 24)
+        ViewMenu.Text = "&Ventas"
         ' 
         ' ToolBarToolStripMenuItem
         ' 
@@ -260,7 +305,7 @@ Partial Class MDIPrincipal
         ToolBarToolStripMenuItem.CheckOnClick = True
         ToolBarToolStripMenuItem.CheckState = CheckState.Checked
         ToolBarToolStripMenuItem.Name = "ToolBarToolStripMenuItem"
-        ToolBarToolStripMenuItem.Size = New Size(189, 22)
+        ToolBarToolStripMenuItem.Size = New Size(238, 26)
         ToolBarToolStripMenuItem.Text = "&Barra de herramientas"
         ' 
         ' StatusBarToolStripMenuItem
@@ -269,77 +314,77 @@ Partial Class MDIPrincipal
         StatusBarToolStripMenuItem.CheckOnClick = True
         StatusBarToolStripMenuItem.CheckState = CheckState.Checked
         StatusBarToolStripMenuItem.Name = "StatusBarToolStripMenuItem"
-        StatusBarToolStripMenuItem.Size = New Size(189, 22)
+        StatusBarToolStripMenuItem.Size = New Size(238, 26)
         StatusBarToolStripMenuItem.Text = "&Barra de estado"
         ' 
         ' ToolsMenu
         ' 
         ToolsMenu.DropDownItems.AddRange(New ToolStripItem() {OptionsToolStripMenuItem})
         ToolsMenu.Name = "ToolsMenu"
-        ToolsMenu.Size = New Size(90, 20)
-        ToolsMenu.Text = "&Herramientas"
+        ToolsMenu.Size = New Size(109, 24)
+        ToolsMenu.Text = "&Contabilidad"
         ' 
         ' OptionsToolStripMenuItem
         ' 
         OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        OptionsToolStripMenuItem.Size = New Size(180, 22)
+        OptionsToolStripMenuItem.Size = New Size(154, 26)
         OptionsToolStripMenuItem.Text = "&Opciones"
         ' 
         ' WindowsMenu
         ' 
         WindowsMenu.DropDownItems.AddRange(New ToolStripItem() {NewWindowToolStripMenuItem, CascadeToolStripMenuItem, TileVerticalToolStripMenuItem, TileHorizontalToolStripMenuItem, CloseAllToolStripMenuItem, ArrangeIconsToolStripMenuItem})
         WindowsMenu.Name = "WindowsMenu"
-        WindowsMenu.Size = New Size(66, 20)
-        WindowsMenu.Text = "&Ventanas"
+        WindowsMenu.Size = New Size(148, 24)
+        WindowsMenu.Text = "&Consumos Internos"
         ' 
         ' NewWindowToolStripMenuItem
         ' 
         NewWindowToolStripMenuItem.Name = "NewWindowToolStripMenuItem"
-        NewWindowToolStripMenuItem.Size = New Size(180, 22)
+        NewWindowToolStripMenuItem.Size = New Size(219, 26)
         NewWindowToolStripMenuItem.Text = "&Nueva ventana"
         ' 
         ' CascadeToolStripMenuItem
         ' 
         CascadeToolStripMenuItem.Name = "CascadeToolStripMenuItem"
-        CascadeToolStripMenuItem.Size = New Size(180, 22)
+        CascadeToolStripMenuItem.Size = New Size(219, 26)
         CascadeToolStripMenuItem.Text = "&Cascada"
         ' 
         ' TileVerticalToolStripMenuItem
         ' 
         TileVerticalToolStripMenuItem.Name = "TileVerticalToolStripMenuItem"
-        TileVerticalToolStripMenuItem.Size = New Size(180, 22)
+        TileVerticalToolStripMenuItem.Size = New Size(219, 26)
         TileVerticalToolStripMenuItem.Text = "Mosaico &vertical"
         ' 
         ' TileHorizontalToolStripMenuItem
         ' 
         TileHorizontalToolStripMenuItem.Name = "TileHorizontalToolStripMenuItem"
-        TileHorizontalToolStripMenuItem.Size = New Size(180, 22)
+        TileHorizontalToolStripMenuItem.Size = New Size(219, 26)
         TileHorizontalToolStripMenuItem.Text = "Mosaico &horizontal"
         ' 
         ' CloseAllToolStripMenuItem
         ' 
         CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        CloseAllToolStripMenuItem.Size = New Size(180, 22)
+        CloseAllToolStripMenuItem.Size = New Size(219, 26)
         CloseAllToolStripMenuItem.Text = "C&errar todo"
         ' 
         ' ArrangeIconsToolStripMenuItem
         ' 
         ArrangeIconsToolStripMenuItem.Name = "ArrangeIconsToolStripMenuItem"
-        ArrangeIconsToolStripMenuItem.Size = New Size(180, 22)
+        ArrangeIconsToolStripMenuItem.Size = New Size(219, 26)
         ArrangeIconsToolStripMenuItem.Text = "&Organizar iconos"
         ' 
         ' HelpMenu
         ' 
         HelpMenu.DropDownItems.AddRange(New ToolStripItem() {ContentsToolStripMenuItem, IndexToolStripMenuItem, SearchToolStripMenuItem, ToolStripSeparator8, AboutToolStripMenuItem})
         HelpMenu.Name = "HelpMenu"
-        HelpMenu.Size = New Size(53, 20)
-        HelpMenu.Text = "Ay&uda"
+        HelpMenu.Size = New Size(109, 24)
+        HelpMenu.Text = "&Rol de Pagos"
         ' 
         ' ContentsToolStripMenuItem
         ' 
         ContentsToolStripMenuItem.Name = "ContentsToolStripMenuItem"
         ContentsToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.F1
-        ContentsToolStripMenuItem.Size = New Size(180, 22)
+        ContentsToolStripMenuItem.Size = New Size(218, 26)
         ContentsToolStripMenuItem.Text = "&Contenido"
         ' 
         ' IndexToolStripMenuItem
@@ -347,7 +392,7 @@ Partial Class MDIPrincipal
         IndexToolStripMenuItem.Image = CType(resources.GetObject("IndexToolStripMenuItem.Image"), Image)
         IndexToolStripMenuItem.ImageTransparentColor = Color.Black
         IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
-        IndexToolStripMenuItem.Size = New Size(180, 22)
+        IndexToolStripMenuItem.Size = New Size(218, 26)
         IndexToolStripMenuItem.Text = "&Index"
         ' 
         ' SearchToolStripMenuItem
@@ -355,26 +400,40 @@ Partial Class MDIPrincipal
         SearchToolStripMenuItem.Image = CType(resources.GetObject("SearchToolStripMenuItem.Image"), Image)
         SearchToolStripMenuItem.ImageTransparentColor = Color.Black
         SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
-        SearchToolStripMenuItem.Size = New Size(180, 22)
+        SearchToolStripMenuItem.Size = New Size(218, 26)
         SearchToolStripMenuItem.Text = "&Buscar"
         ' 
         ' ToolStripSeparator8
         ' 
         ToolStripSeparator8.Name = "ToolStripSeparator8"
-        ToolStripSeparator8.Size = New Size(177, 6)
+        ToolStripSeparator8.Size = New Size(215, 6)
         ' 
         ' AboutToolStripMenuItem
         ' 
         AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        AboutToolStripMenuItem.Size = New Size(180, 22)
+        AboutToolStripMenuItem.Size = New Size(218, 26)
         AboutToolStripMenuItem.Text = "&Acerca de..."
+        ' 
+        ' SRIToolStripMenuItem
+        ' 
+        SRIToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {MantenimientosToolStripMenuItem})
+        SRIToolStripMenuItem.Name = "SRIToolStripMenuItem"
+        SRIToolStripMenuItem.Size = New Size(44, 24)
+        SRIToolStripMenuItem.Text = "SRI"
+        ' 
+        ' MantenimientosToolStripMenuItem
+        ' 
+        MantenimientosToolStripMenuItem.Name = "MantenimientosToolStripMenuItem"
+        MantenimientosToolStripMenuItem.Size = New Size(199, 26)
+        MantenimientosToolStripMenuItem.Text = "Mantenimientos"
         ' 
         ' ToolStrip
         ' 
+        ToolStrip.ImageScalingSize = New Size(20, 20)
         ToolStrip.Items.AddRange(New ToolStripItem() {NewToolStripButton, OpenToolStripButton, SaveToolStripButton, ToolStripSeparator1, PrintToolStripButton, PrintPreviewToolStripButton, ToolStripSeparator2, HelpToolStripButton})
-        ToolStrip.Location = New Point(0, 24)
+        ToolStrip.Location = New Point(0, 30)
         ToolStrip.Name = "ToolStrip"
-        ToolStrip.Size = New Size(737, 25)
+        ToolStrip.Size = New Size(842, 27)
         ToolStrip.TabIndex = 6
         ToolStrip.Text = "ToolStrip"
         ' 
@@ -384,7 +443,7 @@ Partial Class MDIPrincipal
         NewToolStripButton.Image = CType(resources.GetObject("NewToolStripButton.Image"), Image)
         NewToolStripButton.ImageTransparentColor = Color.Black
         NewToolStripButton.Name = "NewToolStripButton"
-        NewToolStripButton.Size = New Size(23, 22)
+        NewToolStripButton.Size = New Size(29, 24)
         NewToolStripButton.Text = "Nuevo"
         ' 
         ' OpenToolStripButton
@@ -393,7 +452,7 @@ Partial Class MDIPrincipal
         OpenToolStripButton.Image = CType(resources.GetObject("OpenToolStripButton.Image"), Image)
         OpenToolStripButton.ImageTransparentColor = Color.Black
         OpenToolStripButton.Name = "OpenToolStripButton"
-        OpenToolStripButton.Size = New Size(23, 22)
+        OpenToolStripButton.Size = New Size(29, 24)
         OpenToolStripButton.Text = "Abrir"
         ' 
         ' SaveToolStripButton
@@ -402,13 +461,13 @@ Partial Class MDIPrincipal
         SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), Image)
         SaveToolStripButton.ImageTransparentColor = Color.Black
         SaveToolStripButton.Name = "SaveToolStripButton"
-        SaveToolStripButton.Size = New Size(23, 22)
+        SaveToolStripButton.Size = New Size(29, 24)
         SaveToolStripButton.Text = "Guardar"
         ' 
         ' ToolStripSeparator1
         ' 
         ToolStripSeparator1.Name = "ToolStripSeparator1"
-        ToolStripSeparator1.Size = New Size(6, 25)
+        ToolStripSeparator1.Size = New Size(6, 27)
         ' 
         ' PrintToolStripButton
         ' 
@@ -416,7 +475,7 @@ Partial Class MDIPrincipal
         PrintToolStripButton.Image = CType(resources.GetObject("PrintToolStripButton.Image"), Image)
         PrintToolStripButton.ImageTransparentColor = Color.Black
         PrintToolStripButton.Name = "PrintToolStripButton"
-        PrintToolStripButton.Size = New Size(23, 22)
+        PrintToolStripButton.Size = New Size(29, 24)
         PrintToolStripButton.Text = "Imprimir"
         ' 
         ' PrintPreviewToolStripButton
@@ -425,13 +484,13 @@ Partial Class MDIPrincipal
         PrintPreviewToolStripButton.Image = CType(resources.GetObject("PrintPreviewToolStripButton.Image"), Image)
         PrintPreviewToolStripButton.ImageTransparentColor = Color.Black
         PrintPreviewToolStripButton.Name = "PrintPreviewToolStripButton"
-        PrintPreviewToolStripButton.Size = New Size(23, 22)
+        PrintPreviewToolStripButton.Size = New Size(29, 24)
         PrintPreviewToolStripButton.Text = "Vista previa de impresión"
         ' 
         ' ToolStripSeparator2
         ' 
         ToolStripSeparator2.Name = "ToolStripSeparator2"
-        ToolStripSeparator2.Size = New Size(6, 25)
+        ToolStripSeparator2.Size = New Size(6, 27)
         ' 
         ' HelpToolStripButton
         ' 
@@ -439,37 +498,104 @@ Partial Class MDIPrincipal
         HelpToolStripButton.Image = CType(resources.GetObject("HelpToolStripButton.Image"), Image)
         HelpToolStripButton.ImageTransparentColor = Color.Black
         HelpToolStripButton.Name = "HelpToolStripButton"
-        HelpToolStripButton.Size = New Size(23, 22)
+        HelpToolStripButton.Size = New Size(29, 24)
         HelpToolStripButton.Text = "Ayuda"
         ' 
         ' StatusStrip
         ' 
+        StatusStrip.ImageScalingSize = New Size(20, 20)
         StatusStrip.Items.AddRange(New ToolStripItem() {ToolStripStatusLabel})
-        StatusStrip.Location = New Point(0, 501)
+        StatusStrip.Location = New Point(0, 671)
         StatusStrip.Name = "StatusStrip"
-        StatusStrip.Padding = New Padding(1, 0, 16, 0)
-        StatusStrip.Size = New Size(737, 22)
+        StatusStrip.Padding = New Padding(1, 0, 18, 0)
+        StatusStrip.Size = New Size(842, 26)
         StatusStrip.TabIndex = 7
         StatusStrip.Text = "StatusStrip"
         ' 
         ' ToolStripStatusLabel
         ' 
         ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        ToolStripStatusLabel.Size = New Size(42, 17)
+        ToolStripStatusLabel.Size = New Size(54, 20)
         ToolStripStatusLabel.Text = "Estado"
+        ' 
+        ' ActivarItemsDeImportacionParaFacturacionToolStripMenuItem
+        ' 
+        ActivarItemsDeImportacionParaFacturacionToolStripMenuItem.Name = "ActivarItemsDeImportacionParaFacturacionToolStripMenuItem"
+        ActivarItemsDeImportacionParaFacturacionToolStripMenuItem.Size = New Size(376, 26)
+        ActivarItemsDeImportacionParaFacturacionToolStripMenuItem.Text = "Activar Items Importacion para Facturacion"
+        ' 
+        ' TransaccionesToolStripMenuItem
+        ' 
+        TransaccionesToolStripMenuItem.Name = "TransaccionesToolStripMenuItem"
+        TransaccionesToolStripMenuItem.Size = New Size(224, 26)
+        TransaccionesToolStripMenuItem.Text = "Transacciones"
+        ' 
+        ' SesionDeToolStripMenuItem
+        ' 
+        SesionDeToolStripMenuItem.Name = "SesionDeToolStripMenuItem"
+        SesionDeToolStripMenuItem.Size = New Size(368, 26)
+        SesionDeToolStripMenuItem.Text = "Sesion de Transacciones"
+        ' 
+        ' AprobacionDeTransferenciasDeMaterialToolStripMenuItem
+        ' 
+        AprobacionDeTransferenciasDeMaterialToolStripMenuItem.Name = "AprobacionDeTransferenciasDeMaterialToolStripMenuItem"
+        AprobacionDeTransferenciasDeMaterialToolStripMenuItem.Size = New Size(368, 26)
+        AprobacionDeTransferenciasDeMaterialToolStripMenuItem.Text = "Aprobacion de Transferencias de Material"
+        ' 
+        ' AprobarPackingListToolStripMenuItem
+        ' 
+        AprobarPackingListToolStripMenuItem.Name = "AprobarPackingListToolStripMenuItem"
+        AprobarPackingListToolStripMenuItem.Size = New Size(368, 26)
+        AprobarPackingListToolStripMenuItem.Text = "Aprobar Packing List"
+        ' 
+        ' IngresoDeRetazosToolStripMenuItem
+        ' 
+        IngresoDeRetazosToolStripMenuItem.Name = "IngresoDeRetazosToolStripMenuItem"
+        IngresoDeRetazosToolStripMenuItem.Size = New Size(368, 26)
+        IngresoDeRetazosToolStripMenuItem.Text = "Ingreso de Retazos"
+        ' 
+        ' EgresoDeRetazosToolStripMenuItem
+        ' 
+        EgresoDeRetazosToolStripMenuItem.Name = "EgresoDeRetazosToolStripMenuItem"
+        EgresoDeRetazosToolStripMenuItem.Size = New Size(368, 26)
+        EgresoDeRetazosToolStripMenuItem.Text = "Egreso de Retazos"
+        ' 
+        ' SesionOrdenesPedidosPorAprobarToolStripMenuItem
+        ' 
+        SesionOrdenesPedidosPorAprobarToolStripMenuItem.Name = "SesionOrdenesPedidosPorAprobarToolStripMenuItem"
+        SesionOrdenesPedidosPorAprobarToolStripMenuItem.Size = New Size(368, 26)
+        SesionOrdenesPedidosPorAprobarToolStripMenuItem.Text = "Sesion Ordenes de Pedido por Egresar"
+        ' 
+        ' CierreMensualToolStripMenuItem
+        ' 
+        CierreMensualToolStripMenuItem.Name = "CierreMensualToolStripMenuItem"
+        CierreMensualToolStripMenuItem.Size = New Size(368, 26)
+        CierreMensualToolStripMenuItem.Text = "Cierre Mensual"
+        ' 
+        ' StocksYPreciosToolStripMenuItem
+        ' 
+        StocksYPreciosToolStripMenuItem.Name = "StocksYPreciosToolStripMenuItem"
+        StocksYPreciosToolStripMenuItem.Size = New Size(329, 26)
+        StocksYPreciosToolStripMenuItem.Text = "Stocks y Precios"
+        ' 
+        ' ExistenciaMenoresAlStockMinimoToolStripMenuItem
+        ' 
+        ExistenciaMenoresAlStockMinimoToolStripMenuItem.Name = "ExistenciaMenoresAlStockMinimoToolStripMenuItem"
+        ExistenciaMenoresAlStockMinimoToolStripMenuItem.Size = New Size(329, 26)
+        ExistenciaMenoresAlStockMinimoToolStripMenuItem.Text = "Existencia Menores al Stock Minimo"
         ' 
         ' MDIPrincipal
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(737, 523)
+        ClientSize = New Size(842, 697)
         ControlBox = False
         Controls.Add(ToolStrip)
         Controls.Add(MenuStrip)
         Controls.Add(StatusStrip)
         IsMdiContainer = True
         MainMenuStrip = MenuStrip
-        Margin = New Padding(4, 3, 4, 3)
+        Margin = New Padding(5, 4, 5, 4)
         MaximizeBox = False
         MinimizeBox = False
         Name = "MDIPrincipal"
@@ -535,5 +661,21 @@ Partial Class MDIPrincipal
     Friend WithEvents ToolBarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StatusBarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolsMenu As ToolStripMenuItem
-
+    Friend WithEvents SRIToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MantenimientosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistroDeItemsBodegaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents IngresoDePreciosPorAlmacenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistroDeCostosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistroDeCostosToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ActivarItemsDeImportacionParaFacturacionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TransaccionesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SesionDeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AprobacionDeTransferenciasDeMaterialToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AprobarPackingListToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents IngresoDeRetazosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EgresoDeRetazosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SesionOrdenesPedidosPorAprobarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CierreMensualToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StocksYPreciosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExistenciaMenoresAlStockMinimoToolStripMenuItem As ToolStripMenuItem
 End Class

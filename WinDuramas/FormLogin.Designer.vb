@@ -109,6 +109,7 @@ Partial Class FormLogin
         MaximizeBox = False
         MinimizeBox = False
         Name = "FormLogin"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Acceso de Usuarios"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

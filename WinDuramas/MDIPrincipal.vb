@@ -85,4 +85,15 @@ Public Class MDIPrincipal
 
     Private m_ChildFormNumber As Integer
 
+    Private Sub FileMenu_Click(sender As Object, e As EventArgs) Handles FileMenu.Click
+
+    End Sub
+
+    Private Sub RegistroDeCostosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroDeCostosToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub SesionDeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SesionDeToolStripMenuItem.Click
+
+    End Sub
 End Class
