@@ -96,10 +96,6 @@
               "target": "Package",
               "version": "[13.0.4003, )"
             },
-            "CrystalReports.Windows.Forms": {
-              "target": "Package",
-              "version": "[13.0.4003, )"
-            },
             "Microsoft.DotNet.Cli.Utils": {
               "target": "Package",
               "version": "[2.0.0, )"

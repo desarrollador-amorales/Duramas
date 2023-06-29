@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "a2sCdbAvlyp40dUGGWqlW3MMHaFXKmitm8K3pk4QTUqKsX4oX+hobBwSdVMrZBtOWM8/v+/3ld5Ulcy5KKLkLA==",
+  "dgSpecHash": "4ocIESflFJQhQpbbrVmHoRDp7NV+vo6uZEB7lqvKBl9gwZRvfxBWuSIGDGsx89g67FG3EgKAzWa5iLHtrK+k3A==",
   "success": true,
   "projectFilePath": "C:\\Duramas2023\\Repositorio\\WinDuramas\\WinDuramas.vbproj",
   "expectedPackageFiles": [
@@ -29,7 +29,6 @@
     "C:\\Users\\Sistemas\\.nuget\\packages\\crystalreports.shared\\13.0.4003\\crystalreports.shared.13.0.4003.nupkg.sha512",
     "C:\\Users\\Sistemas\\.nuget\\packages\\crystalreports.shockwaveflashobjects\\13.0.4003\\crystalreports.shockwaveflashobjects.13.0.4003.nupkg.sha512",
     "C:\\Users\\Sistemas\\.nuget\\packages\\crystalreports.web\\13.0.4003\\crystalreports.web.13.0.4003.nupkg.sha512",
-    "C:\\Users\\Sistemas\\.nuget\\packages\\crystalreports.windows.forms\\13.0.4003\\crystalreports.windows.forms.13.0.4003.nupkg.sha512",
     "C:\\Users\\Sistemas\\.nuget\\packages\\crystalreports.wpf.viewershared\\13.0.4003\\crystalreports.wpf.viewershared.13.0.4003.nupkg.sha512",
     "C:\\Users\\Sistemas\\.nuget\\packages\\log4net\\2.0.12\\log4net.2.0.12.nupkg.sha512",
     "C:\\Users\\Sistemas\\.nuget\\packages\\microsoft.build\\15.3.409\\microsoft.build.15.3.409.nupkg.sha512",
@@ -416,16 +415,6 @@
       "warningLevel": 1,
       "message": "El paquete \"CrystalReports.Web 13.0.4003\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0-windows7.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "CrystalReports.Web",
-      "targetGraphs": [
-        "net6.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"CrystalReports.Windows.Forms 13.0.4003\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0-windows7.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "CrystalReports.Windows.Forms",
       "targetGraphs": [
         "net6.0-windows7.0"
       ]
