@@ -3,6 +3,13 @@ Imports System.Data.SqlClient
 Imports System.Runtime.CompilerServices
 Imports System.Security.Principal
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
+Imports WinDuramas.WinDuramas
+Imports CrystalDecisions.ReportSource
+Imports CrystalDecisions.ReportAppServer
+Imports System
+Imports System.ComponentModel
 
 Public Class FrmAlmacen
     Dim Nuevo As Integer
@@ -64,7 +71,7 @@ Public Class FrmAlmacen
         Do While Not Tabla.EOF
             ItmX = ListaDatos.Items.Add(CStr(Tabla.Fields("almacencod").Value))
             ItmX.SubItems.Add(CStr(Tabla.Fields("almacendes").Value))
-            '          ItmX.SubItems.Add(CStr(Tabla.Fields("almacendes")))
+            '            ItmX.SubItems.Add(CStr(Tabla.Fields("almacendes")))
 
             Tabla.MoveNext()
         Loop
@@ -179,5 +186,18 @@ Public Class FrmAlmacen
         ListadoAlmacenes()
         Nuevo = 1
 
+    End Sub
+
+    Private Sub CmdImprimir_Click(sender As Object, e As EventArgs) Handles CmdImprimir.Click
+        Dim Consulta As String
+        Dim Tabla As New ADODB.Recordset
+        Dim Reporte As ReportDocument
+
+        Consulta = " select * from almacenes "
+
+        Reporte = New CRAlmacenes
+
+        '        EnterpriseReport1.ReportSource = Reporte
+        '        Reporte.SetDataSource(Consulta)
     End Sub
 End Class
