@@ -70,3 +70,7 @@ D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.genru
 D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\ref\WinDuramas.dll
 C:\Duramas2023\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.MDIPrincipal.resources
 D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.MDIPrincipal.resources
+D:\Proyectos C#\Repositorio\WinDuramas\obj\Debug\net6.0-windows\WinDuramas.FrmBancos.resources
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\CrystalDecisions.CrystalReports.Engine.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\CrystalDecisions.ReportSource.dll
+D:\Proyectos C#\Repositorio\WinDuramas\bin\Debug\net6.0-windows\CrystalDecisions.Shared.dll
