@@ -180,4 +180,8 @@ Public Class FrmAlmacen
         Nuevo = 1
 
     End Sub
+
+    Private Sub CmdImprimir_Click(sender As Object, e As EventArgs) Handles CmdImprimir.Click
+
+    End Sub
 End Class
