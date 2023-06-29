@@ -23,6 +23,7 @@
     End Sub
 
     Sub EnceraPantalla()
+        'comentario para encerar campos
         TxtCriterio.Text = ""
         TxtCriterio1.Text = ""
         TxtCampos0.Text = ""
