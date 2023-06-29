@@ -23,7 +23,6 @@
     End Sub
 
     Sub EnceraPantalla()
-
         TxtCriterio.Text = ""
         TxtCriterio1.Text = ""
         TxtCampos0.Text = ""
